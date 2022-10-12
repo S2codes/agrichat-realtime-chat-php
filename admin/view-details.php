@@ -138,7 +138,7 @@ include "includes/config.php";
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="http://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
@@ -148,17 +148,10 @@ include "includes/config.php";
             $('#status-btn').click(function(e) {
                 e.preventDefault();
                 let data = $('#statusForm').serializeArray();
-                // console.log(data);
-                // console.log(data[2]);
-                // console.log(data[2].value);
-
-
                 let msg = "Once Blocked, User Can't able to chat with other";
                 if (data[2].value !== 'block') {
                     msg = "Once Active, User can interact with other Members";
                 }
-
-                willDelete = false;
 
                 swal({
                         title: "Are you sure?",
@@ -170,34 +163,27 @@ include "includes/config.php";
                     .then((willDelete) => {
                         if (willDelete) {
                             $.ajax({
-                                url: "controller/changeStatus.php",
+                                url: "./controller/changeStatus.php",
                                 type: "POST",
                                 data: data,
 
                                 success: function(data) {
-                                    console.log(data);
+                                    data = JSON.parse(data);
+                                    if (data.response) {
+
+                                        swal("Success! User's Status is Changed", {
+                                            icon: "success",
+                                        });
+                                    }
                                 }
                             })
 
 
-
-
-
-                            swal("Poof! User was Blocked!", {
-                                icon: "success",
-                            });
-
-                        } else {
-                            alert("cancel");
                         }
                     });
 
-
-
-
-
-
             })
+
 
         });
     </script>
