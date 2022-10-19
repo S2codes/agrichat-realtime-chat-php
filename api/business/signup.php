@@ -28,19 +28,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     exit();
   } else {
 
-    $data = json_decode(file_get_contents('php://input'), true);
-    $name = $data['name'];
-    $company = $data['company'];
-    $state = $data['state'];
-    $district = $data['district'];
-    $block = $data['block'];
-    $mobile = $data['mobile'];
-    $email = $data['email'];
-    $activity = $data['activity'];
-    $password = $data['password'];
+    $name = $_POST['name'];
+    $company = $_POST['company'];
+    $state = $_POST['state'];
+    $district = $_POST['district'];
+    $block = $_POST['block'];
+    $mobile = $_POST['mobile'];
+    $email = $_POST['email'];
+    $activity = $_POST['activity'];
+    $password = $_POST['password'];
 
-    include "../../db/conn.php";
-    $DB = new Database();
 
     $validation_sql_by_email = "SELECT * FROM `business` WHERE `email` = '$email'";
 

@@ -12,7 +12,7 @@
           $_SESSION['admin'] = true;
         }
         else{
-          header('Location: ../');
+          header('Location: ../admin/sign-in?type=error');
         }
     }
   }
@@ -25,7 +25,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>Sign in as admin | Muscle & Fitness Care</title>
+    <title>Sign in as admin | Agri Chat</title>
 </head>
 <style>
     *{
@@ -39,10 +39,20 @@
 </style>
 <body class="d-flex align-items-center justify-content-center">
 
-    <main class="form-signin p-3" style=" width: 25%;">
+    <main class="form-signin p-3" >
+
         <form method="POST" action="sign-in.php">
           <!-- <img class="mb-4" src="assets/img/logo.png" alt="" width="100" height="auto" style=" object-fit: cover; margin: 0 auto;"> -->
           <h1 class="h3 mb-3 fw-normal text-center">Please sign in</h1>
+
+          <?php
+            if (isset($_GET['type']) && $_GET['type']=="error") {
+              echo '<div class="alert alert-danger" role="alert">
+              Invalid Credentials
+            </div>';
+            }
+          ?>
+          
       
           <div class="form-floating mb-2">
             <input type="text" name="auth_user" class="form-control" id="floatingInput" placeholder="name@example.com" required>

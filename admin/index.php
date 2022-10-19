@@ -36,7 +36,9 @@ $total_student = $DB->CountRows("SELECT * FROM `students`");
 
         <!-- statictics card  -->
         <div class="row">
+
             <div class="col m-2 numBox">
+                <a href="farmers">
                 <div class="numIcon" style="background-color: rgba(3, 3, 177, 0.678);">
                     <i class='bx bxs-widget'></i>
                 </div>
@@ -44,8 +46,11 @@ $total_student = $DB->CountRows("SELECT * FROM `students`");
                     <span class="numHead">Farmers </span>
                     <span id="totalnum"><?php echo $total_farmer; ?></span>
                 </div>
+                </a>
             </div>
+
             <div class="col m-2 numBox">
+                <a href="business">
                 <div class="numIcon" style=" background-color: rgba(134, 12, 175, 0.705);">
                     <i class='bx bxs-truck'></i>
                 </div>
@@ -53,8 +58,11 @@ $total_student = $DB->CountRows("SELECT * FROM `students`");
                     <span class="numHead">Bussiness </span>
                     <span id="totalnum"><?php echo $total_business; ?></span>
                 </div>
+                </a>
             </div>
+
             <div class="col m-2 numBox">
+                <a href="experts">
                 <div class="numIcon" style=" background-color: rgba(3, 3, 177, 0.678);">
                     <i class='bx bxs-package'></i>
                 </div>
@@ -62,8 +70,11 @@ $total_student = $DB->CountRows("SELECT * FROM `students`");
                     <span class="numHead">Experts </span>
                     <span id="totalnum"><?php echo $total_expert; ?></span>
                 </div>
+                </a>
             </div>
+
             <div class="col m-2 numBox">
+                <a href="students">
                 <div class="numIcon" style=" background-color: rgba(134, 12, 175, 0.705);;">
                     <i class='bx bxs-user'></i>
                 </div>
@@ -71,8 +82,10 @@ $total_student = $DB->CountRows("SELECT * FROM `students`");
                     <span class="numHead">Students</span>
                     <span id="totalnum"><?php echo $total_student; ?></span>
                 </div>
+                </a>
             </div>
         </div>
+
         <div class="dataContainer mt-3">
             <div class="row ">
                 <div class="col-md-6 ">

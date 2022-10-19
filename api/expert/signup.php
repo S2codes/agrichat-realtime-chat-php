@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     exit();
   } else {
 
-    // $data= json_decode(file_get_contents('php://input'), true);
+    
     $name = $_POST['name'];
     $state = $_POST['state'];
     $district = $_POST['district'];
@@ -37,9 +37,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
     $field = $_POST['field'];
     $password = $_POST['password'];
-
-    include "../../db/conn.php";
-    $DB = new Database();
 
     $validation_sql_by_mobile = "SELECT * FROM `expert` WHERE `mobile` = '$mobile'";
     //   return if user's mobile number already exits 
@@ -63,8 +60,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($DB->Query($sql)) {
       echo json_encode(
         array(
-          'message' => 'Inserted Successfuly',
-          'response' => false,
+          'message' => 'Signup Successfuly',
+          'response' => true,
           'status' => '200',
           'data' => [
             'name' => $name,

@@ -36,7 +36,8 @@
         
         public function Connect(){
         
-            $this->connection=new mysqli("localhost","iczzxxzk_beetabieAgrichat","VJ]#[3+PvGyy","iczzxxzk_agrichat");
+            // $this->connection=new mysqli("localhost","iczzxxzk_beetabieAgrichat","VJ]#[3+PvGyy","iczzxxzk_agrichat");
+            $this->connection=new mysqli("localhost","root","","agrichat");
         }
         
         //Query Handling

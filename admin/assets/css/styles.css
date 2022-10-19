@@ -1,3 +1,4 @@
+/* @developed by Subhankar Sarkar */
 /*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
 
@@ -117,7 +118,7 @@ a{
 }
 
 .sublink{
-  padding-left: 4rem;
+  /* padding-left: 4rem; */
   margin-bottom: 0!important;
 }
 
@@ -190,14 +191,22 @@ a{
 }
 
 .numBox{
-  width: 400px;
-  display: flex; 
+  width: 23%;
+  /* display: flex; 
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-evenly; */
   border-radius: 13px;
   background-color: rgb(248, 248, 248);
   box-shadow: 3px 4px 12px -4px #454545a1;
 }
+
+.numBox a{
+  width: 100%;
+  display: flex; 
+  align-items: center;
+  justify-content: space-evenly;
+}
+
 .numBox .numIcon {
   font-size: 35px;
   margin: 9px;

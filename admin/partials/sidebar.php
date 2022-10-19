@@ -11,7 +11,7 @@
 <div class="l-navbar" id="nav-bar">
     <nav class="nav">
         <div>
-            <a href="#" class="nav__logo">
+            <a href="#" class="nav__logo" title="Home">
                 <i class='bx bx-layer nav__logo-icon'></i>
                 <span class="nav__logo-name">BeetaBie</span>
             </a>
@@ -27,26 +27,31 @@
                         <span class="nav__name">Courses</span>
                     </a> -->
 
-                <a href="#" class="nav__link">
+                <a href="translation" class="nav__link">
                     <i class='bx bx-message-square-detail nav__icon'></i>
-                    <span class="nav__name">Translation</span>
+                    <span class="nav__name">Translation</span> 
                 </a>
 
-                <div class="nav__link" style="margin-bottom: 0;">
-                    <i class='bx bx-user nav__icon'></i>
+                <a class="nav__link" >
+                <i class='bx bx-chevron-down nav__icon'></i>
                     <span class="nav__name">Users</span>
+                </a>
 
-                </div>
-                <a href="farmers.php" class="nav__link sublink">
+
+                <a href="farmers" class="nav__link sublink">
+                <i class='bx bx-user nav__icon'></i>
                     <span class="nav__name">Farmers</span>
                 </a>
                 <a href="business" class="nav__link sublink">
+                    <i class='bx bxs-business nav__icon'></i>
                     <span class="nav__name">Bussiness</span>
                 </a>
                 <a href="experts" class="nav__link sublink">
+                    <i class='bx bx-book nav__icon'></i>
                     <span class="nav__name">Experts</span>
                 </a>
                 <a href="students" class="nav__link sublink">
+                    <i class='bx bxs-graduation nav__icon' ></i>
                     <span class="nav__name">Students</span>
                 </a>
 
