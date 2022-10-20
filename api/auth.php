@@ -1,4 +1,4 @@
-|<?php
+<?php
     include "../../db/conn.php";
     $DB = new Database();
     $sql = "SELECT * FROM `api_auth` WHERE status = 'active'";
